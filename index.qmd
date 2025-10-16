@@ -67,7 +67,7 @@ Use a PDF library to programmatically examine each PDF. Use a functional approac
 
 library(pdftools)
 library(stringr)
-files <- list.files()[15:length(list.files())]
+files <- list.files()[7:length(list.files()) - 1]
 
 pdf <- function(x){
 text <- pdf_info(x)$metadata
@@ -86,9 +86,6 @@ data <- map(files,pdf) %>%
 data_1 <- data.frame(data)
 
 
-git rm -r --cached rjavaenv
-git commit -m "Remove large rjavaenv folder"
-git reset --hard HEAD~1
 ```
 
 ------------------------------------------------------------------------
